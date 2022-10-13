@@ -1,0 +1,59 @@
+﻿<Page
+    x:Class="QBRating_RobertoVinas.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:QBRating_RobertoVinas"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:muxc="using:Microsoft.UI.Xaml.Controls"    
+    mc:Ignorable="d"    
+    Width="Auto"
+    Height="Auto">
+    
+    <Border BorderBrush="Black" BorderThickness="2" Margin="10,20" Width="600">
+        <Grid Margin="10" x:Name="grdMain" Width="500">
+            
+            <!--Grid Definitions-->
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"></ColumnDefinition>
+                <ColumnDefinition Width="Auto"></ColumnDefinition>
+                <ColumnDefinition Width="Auto"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            
+            <!--Header Area-->
+            <Image Source="/Assets/VikingsLogo.jpg" Grid.Column="0" Grid.Row="0" Width="50" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10"/>
+            <TextBlock x:Name="txtTitle" Text="Quarterback Rating Calculator" FontSize="20" FontWeight="Bold" Width="300" Grid.Column="1" Margin="10" VerticalAlignment="Center" HorizontalAlignment="Left"></TextBlock>
+            
+            <!--Entry Form-->
+            <StackPanel Width="Auto" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="3" Grid.RowSpan="6" Margin="10">                
+                <TextBox x:Name="txtPlayerName" HorizontalAlignment="Left" Width="300" Margin="2" PlaceholderText="Player Name" Header="Player Name:"></TextBox>
+                <TextBox x:Name="txtPassAttempts" HorizontalAlignment="Left" Width="200" Margin="2"  PlaceholderText="Pass Attempts" Header="Passes Attempted:"></TextBox>
+                <TextBox x:Name="txtPassCompletions" HorizontalAlignment="Left" Width="200" Margin="2" PlaceholderText="Pass Completions" Header="Pass Completions:"></TextBox>
+                <TextBox x:Name="txtPassingYards" HorizontalAlignment="Left" Width="200" Margin="2" PlaceholderText="Passing Yards" Header="Passing Yards:"></TextBox>
+                <TextBox x:Name="txtPassingTouchdowns" HorizontalAlignment="Left" Width="200" Margin="2" PlaceholderText="Passing Touchdowns" Header="Passing Touchdowns:"></TextBox>
+                <TextBox x:Name="txtInterceptions" HorizontalAlignment="Left" Width="200" Margin="2" PlaceholderText="Interceptions" Header="Interceptions:"></TextBox>
+            </StackPanel>
+            
+            <!--Buttons-->
+            <Button x:Name="btnCalculate" Width="120" Margin="10,20" Grid.Column ="0" Grid.Row="7" Content="Calculate QBR" Click="btnCalculate_Click" Style="{StaticResource AccentButtonStyle}"></Button>
+            <Button x:Name="btnReset" Width="120" Grid.Column ="1" Grid.Row="7" Content="Reset" HorizontalAlignment="Left" Click="btnReset_Click" Style="{StaticResource AccentButtonStyle}"></Button>
+            
+            <!--Results Area-->
+            <TextBlock x:Name="txtQuarterbackRating" FontSize="18" TextWrapping="Wrap" Grid.Column="1" Grid.Row="9" MaxWidth="300"></TextBlock>
+
+        </Grid>
+    </Border>
+</Page>
